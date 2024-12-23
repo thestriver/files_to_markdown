@@ -2,20 +2,22 @@
 
 This is a base module template for creating agent, agent orchestrator, environment and tool modules. You can check out other examples of agent, orchestrator, environment and tool modules using the CLI commands with the [Naptha SDK](https://github.com/NapthaAI/naptha-sdk). 
 
-- [🧩 What are Naptha Modules](#-what-are-naptha-modules)
-- [🏗 Creating a new Naptha Module](#-creating-a-new-naptha-module)
-  - [🛠️ Prerequisites](#-prerequisites)
-  - [🔧 Making Changes to the Module](#-making-changes-to-the-module)
+- [Naptha Module Template](#naptha-module-template)
+  - [🧩 What are Naptha Modules](#-what-are-naptha-modules)
+  - [🏗 Creating a new Naptha Module](#-creating-a-new-naptha-module)
+    - [🛠 Prerequisites](#-prerequisites)
+      - [Install Poetry](#install-poetry)
+    - [🔧 Making Changes to the Module](#-making-changes-to-the-module)
     - [Clone and Install the Module](#clone-and-install-the-module)
-    - [Making Changes to the Code](#making-changes-to-the-code)
-    - [Making Changes to the Configs](#making-changes-to-the-configs)
-- [🧪 Testing the Module](#-testing-the-module)
-  - [🖥️ Test the Module Locally without Node](#-test-the-module-locally-without-node)
-  - [🌐 Test the Module on a Local Node (with a Local Hub)](#-test-the-module-on-a-local-node-with-a-local-hub)
-    - [Register the new or updated Module on a local Hub](#register-the-new-or-updated-module-on-a-local-hub)
-    - [Running the Module on a local Naptha Node](#running-the-module-on-a-local-naptha-node)
-  - [☁️ Test the Module on a hosted Node (with the hosted Naptha Hub)](#-test-the-module-on-a-hosted-node-with-the-hosted-naptha-hub)
-- [💰 Bounties & Microgrants](#-bounties-and-microgrants)
+      - [Making Changes to the Code](#making-changes-to-the-code)
+      - [Making Changes to the Configs](#making-changes-to-the-configs)
+  - [🧪 Testing the Module](#-testing-the-module)
+    - [🖥️ Test the Module Locally without Node](#️-test-the-module-locally-without-node)
+    - [🌐 Test the Module on a Local Node (with a Local Hub)](#-test-the-module-on-a-local-node-with-a-local-hub)
+      - [Register the new or updated Module on a local Hub](#register-the-new-or-updated-module-on-a-local-hub)
+      - [Running the Module on a local Naptha Node](#running-the-module-on-a-local-naptha-node)
+    - [☁️ Test the Module on a hosted Node (with the hosted Naptha Hub)](#️-test-the-module-on-a-hosted-node-with-the-hosted-naptha-hub)
+  - [💰 Bounties and Microgrants](#-bounties-and-microgrants)
 
 ## 🧩 What are Naptha Modules
 
@@ -143,19 +145,19 @@ For this step, you will need to:
 If creating an agent module, you can register it on the Hub using:
 
 ```bash
-naptha agents agent_name -p "description='Agent description' url='ipfs://QmNer9SRKmJPv4Ae3vdVYo6eFjPcyJ8uZ2rRSYd3koT6jg' type='package' version='0.1'" 
+naptha agents agent_name -p "description='Agent description' parameters='{tool_name: str, tool_input_data: str}' module_url='ipfs://QmNer9SRKmJPv4Ae3vdVYo6eFjPcyJ8uZ2rRSYd3koT6jg'" 
 ```
 
 If creating an orchestrator module, you can register it on the Hub using:
 
 ```bash
-naptha orchestrators orchestrator_name -p "description='Orchestrator description' url='ipfs://QmNer9SRKmJPv4Ae3vdVYo6eFjPcyJ8uZ2rRSYd3koT6jg' type='package' version='0.1'" 
+naptha orchestrators orchestrator_name -p "description='Orchestrator description' parameters='{input_parameter_1: str, input_parameter_2: int}' module_url='ipfs://QmNer9SRKmJPv4Ae3vdVYo6eFjPcyJ8uZ2rRSYd3koT6jg'" 
 ```
 
 If creating an environment module, you can register it on the Hub using:
 
 ```bash
-naptha environments environment_name -p "description='Environment description' url='ipfs://QmNer9SRKmJPv4Ae3vdVYo6eFjPcyJ8uZ2rRSYd3koT6jg' type='package' version='0.1'" 
+naptha environments environment_name -p "description='Environment description' parameters='{input_parameter_1: str, input_parameter_2: int}' module_url='ipfs://QmNer9SRKmJPv4Ae3vdVYo6eFjPcyJ8uZ2rRSYd3koT6jg'" 
 ```
 
 Make sure to replace the placeholder descriptions and URLs with your own. To check that the module is registered correctly, you can run ```naptha agents```, ```naptha orchestrators```, or ```naptha environments```.
