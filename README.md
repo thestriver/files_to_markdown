@@ -157,7 +157,7 @@ naptha orchestrators orchestrator_name -p "description='Orchestrator description
 If creating an environment module, you can register it on the Hub using:
 
 ```bash
-naptha environments environment_name -p "description='Environment description' parameters='{input_parameter_1: str, input_parameter_2: int}' module_url='ipfs://QmNer9SRKmJPv4Ae3vdVYo6eFjPcyJ8uZ2rRSYd3koT6jg'" 
+naptha environments environment_name -p "description='Environment description' url='ipfs://QmNer9SRKmJPv4Ae3vdVYo6eFjPcyJ8uZ2rRSYd3koT6jg' type='package' version='0.1'" 
 ```
 
 Make sure to replace the placeholder descriptions and URLs with your own. To check that the module is registered correctly, you can run ```naptha agents```, ```naptha orchestrators```, or ```naptha environments```.
