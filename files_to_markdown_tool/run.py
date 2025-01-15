@@ -65,6 +65,7 @@ if __name__ == "__main__":
         "tool_name": "files_to_markdown",
         "tool_input_data": "files_to_markdown_tool/input_files/naptha.pptx"
     }
+    #naptha run tool:files_to_markdown_tool -p "tool_name='files_to_markdown_tool', tool_input_data='path/to/your/file.pptx'"
 
     module_run = {
         "inputs": input_params,
