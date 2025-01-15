@@ -1,14 +1,19 @@
 [tool.poetry]
-name = "module-template"
+name = "files_to_markdown_tool"
 version = "0.1.0"
-description = ""
-authors = ["Richard Blythman <richardblythman@gmail.com>"]
+description = "Convert files to markdown"
+authors = ["Dean <dean@aidevmode.com>"]
 readme = "README.md"
+packages = [
+    { include = "files_to_markdown_tool", from = "." }
+]
 
 [tool.poetry.dependencies]
 python = ">=3.10,<=3.13"
 naptha-sdk = {git = "https://github.com/NapthaAI/naptha-sdk.git"}
 python-dotenv = "^1.0.1"
+numpy = "<2.0"
+markitdown = "^0.0.1a3"
 
 [build-system]
 requires = ["poetry-core"]

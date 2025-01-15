@@ -1,3 +1,11 @@
+
+
+```
+naptha run tool:files_to_markdown_tool -p "tool_name='files_to_markdown_tool', tool_input_data='path/to/your/file.pptx'"
+```
+
+
+
 # Naptha Module Template
 
 This is a base module template for creating agent, agent orchestrator, environment and tool modules. You can check out other examples of agent, orchestrator, environment and tool modules using the CLI commands with the [Naptha SDK](https://github.com/NapthaAI/naptha-sdk). 

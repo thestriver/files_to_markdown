@@ -1,0 +1,19 @@
+[
+  {
+    "name": "tool_deployment_1",
+    "module": {
+      "name": "files_to_markdown_tool",
+      "description": "A tool to convert files to markdown format",
+      "parameters": "{tool_name: str, tool_input_data: str}",
+      "module_type": "tool",
+      "module_version": "v0.1",
+      "module_entrypoint": "run.py",
+      "execution_type": "package"
+    },
+    "node": { "ip": "localhost" },
+    "config": {
+      "config_name": "tool_config_1",
+      "llm_config": { "config_name": "model_1" }
+    }
+  }
+]
